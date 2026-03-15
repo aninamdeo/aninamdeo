@@ -91,8 +91,15 @@
         <div class="flex justify-center lg:justify-end">
             <div class="relative">
                 <div class="absolute inset-0 rounded-full border-2 border-dashed border-indigo-500/30 animate-spin" style="animation-duration:20s"></div>
-                <div class="w-72 h-72 lg:w-96 lg:h-96 rounded-full glass border-2 border-indigo-500/50 shadow-2xl shadow-indigo-500/20 relative z-10 bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 flex items-center justify-center">
-                    <div class="text-center"><div class="text-8xl lg:text-9xl font-black gradient-text">AN</div><p class="text-slate-400 text-sm mt-2">AI Developer & IT Manager</p></div>
+                <div class="w-72 h-72 lg:w-96 lg:h-96 rounded-full border-2 border-indigo-500/50 shadow-2xl shadow-indigo-500/20 relative z-10 flex items-center justify-center overflow-hidden
+                    {{ !empty($settings['profile_photo_url']) ? 'bg-white' : 'bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 glass' }}">
+                    @if(!empty($settings['profile_photo_url']))
+                        <img src="{{ $settings['profile_photo_url'] }}" alt="Aniket Namdeo"
+                             class="w-full h-full object-cover object-top"
+                             style="object-position: center 15%;">
+                    @else
+                        <div class="text-center"><div class="text-8xl lg:text-9xl font-black gradient-text">AN</div><p class="text-slate-400 text-sm mt-2">AI Developer & IT Manager</p></div>
+                    @endif
                 </div>
                 <div class="absolute -top-4 -right-4 glass border border-indigo-500/30 rounded-2xl px-3 py-2 text-center animate-float z-20"><p class="text-2xl font-black gradient-text">50+</p><p class="text-xs text-slate-400">Projects</p></div>
                 <div class="absolute -bottom-4 -left-4 glass border border-purple-500/30 rounded-2xl px-3 py-2 text-center animate-float z-20" style="animation-delay:2s"><p class="text-2xl font-black text-purple-400">8+</p><p class="text-xs text-slate-400">Years Exp.</p></div>
@@ -515,11 +522,6 @@
             <div class="flex items-center gap-4 text-slate-500 text-sm">
                 <a href="{{ route('blog.index') }}" class="hover:text-indigo-400 transition-colors">Blog</a>
                 <a href="#contact" class="hover:text-indigo-400 transition-colors">Contact</a>
-                @auth
-                    <a href="{{ route('admin.dashboard') }}" class="hover:text-indigo-400 transition-colors">Admin</a>
-                @else
-                    <a href="{{ route('login') }}" class="hover:text-indigo-400 transition-colors">Admin</a>
-                @endauth
             </div>
         </div>
         <p class="text-center text-xs text-slate-600 mt-6">© {{ date('Y') }} Aniket Namdeo. Built with Laravel & TailwindCSS.</p>
