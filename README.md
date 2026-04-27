@@ -1,7 +1,7 @@
 # 👋 Hey there! I'm Aniket Namdeo
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com/?lines=AI+Developer+%26+IT+Manager;Full+Stack+Engineer+%26+Team+Lead;Building+Scalable+Solutions+for+Global+Clients&font=Fira%20Code&center=true&width=600&height=60&color=6366f1&vCenter=true&size=22">
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=AI+Developer+%26+IT+Manager;Full+Stack+Engineer+%26+IT+Manager;Building+Scalable+Solutions+for+Global+Clients&font=Fira%20Code&center=true&width=600&height=60&color=6366f1&vCenter=true&size=22">
 </div>
 
 ## 🚀 About Me
